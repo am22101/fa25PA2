@@ -54,7 +54,7 @@ struct MinHeap {
             if (rightChildPos < size) {
                 int leftChildIndex = data[leftChildPos];
                 int rightChildIndex = data[rightChildPos];
-                if (weightArr[leftChildIndex] < weightArr[rightChildIndex]) {
+                if (weightArr[rightChildIndex] < weightArr[leftChildIndex]) {
                     childToSwap = data[rightChildPos];
                 }
             }
