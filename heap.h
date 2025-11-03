@@ -21,9 +21,8 @@ struct MinHeap {
     }
 
     int pop(int weightArr[]) {
-        int temp = data[0];
         size--;
-        data[size] = temp;
+        int temp = data[size];
         downheap(0, weightArr);
         return temp;
     }
