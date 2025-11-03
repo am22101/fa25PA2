@@ -21,8 +21,9 @@ struct MinHeap {
     }
 
     int pop(int weightArr[]) {
+        int temp = data[0];
         size--;
-        int temp = data[size];
+        data[0] = data[size];
         downheap(0, weightArr);
         return temp;
     }
@@ -54,7 +55,7 @@ struct MinHeap {
                 int leftChildIndex = data[leftChildPos];
                 int rightChildIndex = data[rightChildPos];
                 if (weightArr[rightChildIndex] < weightArr[leftChildIndex]) {
-                    childToSwap = data[rightChildPos];
+                    childToSwap = rightChildPos;
                 }
             }
 
